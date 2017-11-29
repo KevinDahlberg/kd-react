@@ -1,5 +1,5 @@
 import React, { Component } from 'react'
-// import { Link } from 'react-router-dom'
+import { Link } from 'react-router-dom'
 
 export default class PostExcerpt extends Component {
   constructor(props) {
@@ -43,7 +43,7 @@ export default class PostExcerpt extends Component {
     }
 
     return (
-    // <Link to={postPath}>
+    <Link to={postPath}>
       <div key={postInfo.id}>
         <div className="col-md-3">
           <div className="col-xs-12" style={boxStyle}>
@@ -52,7 +52,7 @@ export default class PostExcerpt extends Component {
           </div>
         </div>
       </div>
-    // </Link>
+    </Link>
     )
   }
 

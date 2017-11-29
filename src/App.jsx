@@ -2,6 +2,7 @@ import React, { Component } from 'react'
 import { BrowserRouter as Router, Route, Switch } from 'react-router-dom'
 
 import Home from './views/Home'
+import Post from './views/Post'
 import Navbar from './components/Navbar'
 
 export default class App extends Component {
@@ -52,17 +53,26 @@ export default class App extends Component {
             );
         }
 
-        return (
-            <Router>
-                <div className="body">
-                    <Navbar />
-                    <div className="content-body">
-                        <Switch>
-                                <PropsRoute path='/home' component={Home} {...this.state} />
-                        </Switch>
-                    </div>
+        if (this.state.posts.length === 0) {
+            return (
+                <div>
+                    <div className="col-xs-12 placeholder" />
                 </div>
-            </Router>
-        )
+            )
+        } else {
+            return (
+                <Router>
+                    <div className="body">
+                        <Navbar />
+                        <div className="content-body">
+                            <Switch>
+                                <PropsRoute path='/home' component={Home} {...this.state} />
+                                <PropsRoute path='/:title' component={Post} {...this.state} />
+                            </Switch>
+                        </div>
+                    </div>
+                </Router>
+            )
+        }
     }
 }
