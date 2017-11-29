@@ -29,21 +29,9 @@ export default class Navbar extends Component {
     return (
       <nav className="nav-wrapper">
         <div className="container">
-          <div className="row align-items-center d-flex justify-content-between topbar">
-            <div className="col-xs"></div>
-            <NavLink className="col-xs nav-header" to="/home">Kevin Dahlberg</NavLink>
-            <NavLink className="col-xs" to="/about">About</NavLink>
-          </div>
-          <div className="topnav">
+            <NavLink to="/about">About</NavLink>
             <NavLink to="/home">Home</NavLink>
           </div>
-          <div className="topnav-narrow">
-            <FaBars className="nav-icon" onClick={this.handleClick}></FaBars>
-              <div className="narrow-links">
-
-              </div>
-          </div>
-        </div>
       </nav>
     )
   }

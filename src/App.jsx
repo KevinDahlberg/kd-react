@@ -37,31 +37,30 @@ export default class App extends Component {
 
     render() {
 
-
-    const renderMergedProps = (component, ...rest) => {
-        const finalProps = Object.assign({}, ...rest);
-        return (
-          React.createElement(component, finalProps)
-        );
-      }
-      
-      const PropsRoute = ({ component, ...rest }) => {
-        return (
-          <Route {...rest} render={routeProps => {
-            return renderMergedProps(component, routeProps, rest);
-          }}/>
-        );
-      }
+        const renderMergedProps = (component, ...rest) => {
+            const finalProps = Object.assign({}, ...rest);
+            return (
+            React.createElement(component, finalProps)
+            );
+        }
+        
+        const PropsRoute = ({ component, ...rest }) => {
+            return (
+            <Route {...rest} render={routeProps => {
+                return renderMergedProps(component, routeProps, rest);
+            }}/>
+            );
+        }
 
         return (
             <Router>
                 <div className="body">
-                    <Switch>
-                        <Navbar />
-                        <div className="content-body">
-                            <PropsRoute path='/home' component={Home} {...this.state} />
-                        </div>
-                    </Switch>
+                    <Navbar />
+                    <div className="content-body">
+                        <Switch>
+                                <PropsRoute path='/home' component={Home} {...this.state} />
+                        </Switch>
+                    </div>
                 </div>
             </Router>
         )
