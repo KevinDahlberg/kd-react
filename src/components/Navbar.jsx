@@ -2,7 +2,7 @@ import React, { Component } from 'react'
 import { NavLink } from 'react-router-dom'
 import FaBars from 'react-icons/lib/fa/bars'
 
-export default class Menu extends Component {
+export default class Navbar extends Component {
   constructor(props) {
     super(props)
 
@@ -40,7 +40,7 @@ export default class Menu extends Component {
           <div className="topnav-narrow">
             <FaBars className="nav-icon" onClick={this.handleClick}></FaBars>
               <div className="narrow-links">
-                
+
               </div>
           </div>
         </div>

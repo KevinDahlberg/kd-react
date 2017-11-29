@@ -2,6 +2,7 @@ import React, { Component } from 'react'
 import { BrowserRouter as Router, Route, Switch } from 'react-router-dom'
 
 import Home from './views/Home'
+import Navbar from './components/Navbar'
 
 export default class App extends Component {
     constructor(props) {
@@ -51,14 +52,17 @@ export default class App extends Component {
           }}/>
         );
       }
-      
+
         return (
             <Router>
-            <div className="body">
-                <Switch>
-                    <PropsRoute path='/home' component={Home} {...this.state} />
-                </Switch>
-            </div>
+                <div className="body">
+                    <Switch>
+                        <Navbar />
+                        <div className="content-body">
+                            <PropsRoute path='/home' component={Home} {...this.state} />
+                        </div>
+                    </Switch>
+                </div>
             </Router>
         )
     }
