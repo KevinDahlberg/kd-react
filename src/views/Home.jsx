@@ -6,7 +6,9 @@ import PostExcerpt from '../components/PostExcerpt'
 const Home = (props) => (
     <div>
         <Header />
-        <PostExcerpt posts={props.posts} />
+        <div className="container">
+            <PostExcerpt posts={props.posts} />
+        </div>
     </div>
 )
 

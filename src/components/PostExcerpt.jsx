@@ -39,18 +39,17 @@ export default class PostExcerpt extends Component {
       backgroundColor: color[0],
       padding: '30px',
       height: '350px',
-      marginBottom: '20px'
+      marginBottom: '20px',
+      width: '100%'
     }
 
     return (
     <Link to={postPath}>
-      <div key={postInfo.id}>
-        <div className="col-md-3">
+      <div className="col-md-3" key={postInfo.id}>
           <div className="col-xs-12" style={boxStyle}>
             {this.excerptTitle(postInfo.title.rendered)}
             {this.excerptSummary(postInfo.excerpt.rendered)}
           </div>
-        </div>
       </div>
     </Link>
     )
@@ -59,6 +58,7 @@ export default class PostExcerpt extends Component {
   render() {
     return (
       <div className="excerpt-box">
+        <div className="row">
         {this.props.posts.map((post, idx) => {
             return (
               <div key={idx}>
@@ -67,6 +67,7 @@ export default class PostExcerpt extends Component {
             )
           })
         }
+        </div>
       </div>
     )
   }
