@@ -9,3 +9,32 @@ body {
   width: 100%;
 }
 
+/** Navbar */
+.nav-wrapper {
+  background-color: #212529;
+  color: white;
+}
+
+.nav-wrapper a {
+  color: white;
+  text-decoration: none;
+}
+
+.nav-item {
+  padding: 5px;
+}
+
+/** Header */
+.header {
+  background-color: teal;
+  height: 600px;
+}
+
+.header-content {
+  margin-top: 150px;
+  margin-left: 100px;
+}
+
+.header-content h1 {
+  font-size: 75px;
+}

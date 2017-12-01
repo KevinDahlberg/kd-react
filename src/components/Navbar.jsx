@@ -29,9 +29,15 @@ export default class Navbar extends Component {
     return (
       <nav className="nav-wrapper">
         <div className="container">
-            <NavLink to="/about">About</NavLink>
-            <NavLink to="/home">Home</NavLink>
+          <div className="row d-flex justify-content-between align-items-center">
+              <h1>Kevin Dahlberg</h1>
+              <div>
+              <NavLink className="nav-item" to="/about">About</NavLink>
+              <NavLink className="nav-item" to="/home">Home</NavLink>
+              <NavLink className="nav-item" to="/portfolio">Portfolio</NavLink>
+              </div>
           </div>
+        </div>
       </nav>
     )
   }
