@@ -1,7 +1,11 @@
 import React from 'react'
 
+/**
+ * @function About
+ * @param {*} props
+ * @return displays the content from the about page 
+ */
 function About (props) {
-    console.log(props)
     const displayAboutPage = props.page.map((page, idx) => {
         const content = page.content.rendered
         return (
