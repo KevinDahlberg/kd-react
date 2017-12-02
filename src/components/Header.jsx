@@ -1,4 +1,5 @@
 import React, { Component } from 'react'
+import { Link } from 'react-router-dom'
 
 class Header extends Component {
     constructor(props) {
@@ -36,12 +37,20 @@ class Header extends Component {
                     <div className="row">
                         <div className="col-xs-12 header-content">
                             <div className="row">
+                                <h1>Kevin Dahlberg</h1>
+                            </div>
+                            <div className="row">
                                 <h1>{this.state.currentHeaderItem}</h1>
                             </div>
                             <div className="row">
                                 <h1>Developer.</h1>
                             </div>
                         </div>
+                    </div>
+                    <div className="row align-items-end d-flex justify-content-around header-bottom">
+                        <Link className="nav-item col-xs" to="/about">About</Link>   
+                        <Link className="nav-item col-xs" to="/contact">Contact</Link>
+                        <Link className="nav-item col-xs" to="/portfolio">Portfolio</Link>
                     </div>
                 </div>
             </div>

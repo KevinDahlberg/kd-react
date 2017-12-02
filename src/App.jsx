@@ -3,13 +3,13 @@ import { BrowserRouter as Router, Route, Switch } from 'react-router-dom'
 
 import Home from './views/Home'
 import Post from './views/Post'
-import Navbar from './components/Navbar'
 
 export default class App extends Component {
     constructor(props) {
         super(props)
         this.state = {
-            posts: []
+            posts: [],
+            aboutPage: []
         }
     }   
 
@@ -32,8 +32,29 @@ export default class App extends Component {
             })
     }
 
+    /**
+     * @function fetchAboutPage
+     * @param {*} pageName 
+     * @return sets state as about page
+     * @since 1.0
+     */
+    fetchAboutPage(pageName) {
+        const init = {
+            method: 'GET'
+        }
+        const url = 'http://wordpress.kevindahlberg.com/wp-json/wp/v2/pages?slug=' + pageName
+        fetch(url, init)
+        .then((response) => {
+            return response.json()
+        })
+        .then((page) => {
+            this.setState({aboutPage: page})
+        })
+    }
+
     componentDidMount() {
         this.fetchPosts();
+        this.fetchAboutPage('about');
     }
 
     render() {
@@ -53,7 +74,7 @@ export default class App extends Component {
             );
         }
 
-        if (this.state.posts.length === 0) {
+        if (this.state.posts.length === 0 && this.state.aboutPage.length === 0) {
             return (
                 <div>
                     <div className="col-xs-12 placeholder" />
@@ -63,7 +84,6 @@ export default class App extends Component {
             return (
                 <Router>
                     <div className="body">
-                        <Navbar />
                         <div className="content-body">
                             <Switch>
                                 <PropsRoute path='/home' component={Home} {...this.state} />

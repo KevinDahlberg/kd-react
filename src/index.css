@@ -31,10 +31,21 @@ body {
 }
 
 .header-content {
-  margin-top: 150px;
+  margin-top: 75px;
   margin-left: 100px;
 }
 
 .header-content h1 {
   font-size: 75px;
+}
+
+.header-bottom {
+  margin-top: 95px;
+  color: white;
+  font-size: 36px;
+}
+
+.header-bottom a {
+  color: white;
+  font-family: serif;
 }
