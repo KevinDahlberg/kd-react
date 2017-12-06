@@ -10,14 +10,16 @@ function About (props) {
         const content = page.content.rendered
         return (
             <div className="row" key={idx}>
-                <div><h1>{page.title.rendered}</h1></div>
-                <div dangerouslySetInnerHTML={{__html: content}} />
+                <div className="about-title col-12"><h1>{page.title.rendered}</h1></div>
+                <div className="about-content col-12" dangerouslySetInnerHTML={{__html: content}} />
             </div>
         )
     })
 
     return (
-    <div>{displayAboutPage}</div>
+    <div className="about-container">    
+        <div>{displayAboutPage}</div>
+    </div>
     )
 }
 

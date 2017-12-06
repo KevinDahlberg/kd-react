@@ -23,12 +23,14 @@ export default class App extends Component {
         const init = {
             method: 'GET'
         }
-        fetch('http://wordpress.kevindahlberg.com/wp-json/wp/v2/posts?_embed=true', init)
+        fetch('http://wordpress.kevindahlberg.com/wp-json/wp-rest-routes/v2/content/posts', init)
             .then((response) => {
                 return response.json()
             })
             .then((posts) => {
-               this.setState({posts: posts})
+                console.log(posts.posts)
+               this.setState({posts: posts.posts})
+               console.log(this.state)
             })
     }
 

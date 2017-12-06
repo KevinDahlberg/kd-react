@@ -49,3 +49,40 @@ body {
   color: white;
   font-family: serif;
 }
+
+/** About */
+.about-container {
+  margin: 50px;
+}
+
+.about-title {
+  border-bottom: 2px solid lightgrey;
+}
+
+.about-content {
+  padding: 50px;
+}
+
+/** Portfolio */
+.portfolio-container {
+  margin: 50px;
+}
+
+.portfolio-title {
+  border-bottom: 2px solid lightgrey;
+  margin-bottom: 50px;
+}
+
+/** excerpt box */
+.excerpt-box {
+  margin-bottom: 20px;
+  }
+
+.excerpt-box a {
+  text-decoration: none;
+  color: black;
+}
+
+.excerpt-box a:hover {
+  color: teal;
+}

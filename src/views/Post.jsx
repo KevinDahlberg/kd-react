@@ -34,9 +34,9 @@ export default class Post extends Component {
               <div className="container">
                 <div className="row d-flex justify-content-center">
                     <div className="col-sm-9 post-content">
-                        <h1>{singlePost.title.rendered}</h1>
+                        <h1>{singlePost.title}</h1>
                         <div>
-                            <div dangerouslySetInnerHTML={{__html: singlePost.content.rendered}} />
+                            <div dangerouslySetInnerHTML={{__html: singlePost.content}} />
                         </div>
                     </div>
                 </div>
