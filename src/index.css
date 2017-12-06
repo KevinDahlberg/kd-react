@@ -39,6 +39,10 @@ body {
   font-size: 75px;
 }
 
+.header-content h2 {
+  font-size: 60px;
+}
+
 .header-bottom {
   margin-top: 95px;
   color: white;
@@ -85,4 +89,19 @@ body {
 
 .excerpt-box a:hover {
   color: teal;
+}
+
+/** Contact */
+.contact-container {
+  margin: 50px;
+}
+
+.contact-title {
+  border-bottom: 2px solid lightgrey;
+  margin-bottom: 50px;
+}
+
+.contact-content {
+  padding: 50px;
+  background-color: teal;
 }

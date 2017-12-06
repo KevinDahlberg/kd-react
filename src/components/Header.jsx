@@ -40,17 +40,12 @@ class Header extends Component {
                                 <h1>Kevin Dahlberg</h1>
                             </div>
                             <div className="row">
-                                <h1>{this.state.currentHeaderItem}</h1>
+                                <h2>{this.state.currentHeaderItem}</h2>
                             </div>
                             <div className="row">
-                                <h1>Developer.</h1>
+                                <h2>Developer.</h2>
                             </div>
                         </div>
-                    </div>
-                    <div className="row align-items-end d-flex justify-content-around header-bottom">
-                        <Link className="nav-item col-xs" to="/about">About</Link>   
-                        <Link className="nav-item col-xs" to="/contact">Contact</Link>
-                        <Link className="nav-item col-xs" to="/portfolio">Portfolio</Link>
                     </div>
                 </div>
             </div>
