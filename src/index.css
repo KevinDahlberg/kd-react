@@ -105,3 +105,11 @@ body {
   padding: 50px;
   background-color: teal;
 }
+
+.contact-item {
+  margin-right: 20px;
+}
+
+.contact-textarea {
+  margin-bottom: 10px;
+}

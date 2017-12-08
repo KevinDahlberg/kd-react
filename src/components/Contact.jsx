@@ -6,6 +6,7 @@ export default class Contact extends Component {
         this.state = {
             name: '',
             email: '',
+            subject: '',
             message: '',
         }
         
@@ -38,22 +39,18 @@ export default class Contact extends Component {
                 </div>
                 <div className="contact-content">
                     <form onSubmit={this.handleSubmit}>
-                        <label>
-                            <span>Name: </span>
-                            <input type="text" name="name" value={this.state.name} onChange={this.handleChange} />
-                        </label>
-                        <br />
-                        <label>
-                            <span>Email: </span>
-                            <input type="text" name="email" value={this.state.email} onChange={this.handleChange} />
-                        </label>
-                        <br />
-                        <label>
-                            <span>Message: </span>
-                            <br />
-                            <input type="text" name="message" value={this.state.message} onChange={this.handleChange} />
-                        </label>
-                        <br />
+                        <div>
+                            <div className="contact-textarea d-flex justify-content-center">
+                                <input className="contact-item" type="text" size="36" name="name" value={this.state.name} onChange={this.handleChange} placeholder="Name" />
+                                <input className="contact-item" type="text" size="36" name="email" value={this.state.email} onChange={this.handleChange} placeholder="Email" />
+                            </div>
+                        </div>
+                        <div className="contact-textarea">
+                            <input type="text" size="76" name="subject" value={this.state.subject} onChange={this.handleChange} placeholder="Subject" />
+                        </div>
+                        <div className="contact-textarea">
+                            <textarea rows="6" cols="75" name="message" value={this.state.message} onChange={this.handleChange} placeholder="Message" />
+                        </div>
                         <input type="submit" value="Submit" />
                     </form>
                 </div>
