@@ -1,4 +1,5 @@
 import React, { Component } from 'react'
+import { Link } from 'react-router-dom'
 
 export default class Post extends Component {
     constructor(props) {
@@ -31,9 +32,14 @@ export default class Post extends Component {
         } else {
             const singlePost = this.state.currentPost[0]
           return (
+            <div className="container-fluid">
+            <nav className="navbar">
+                <Link to="/home">Home</Link>
+            </nav>
               <div className="container">
-                <div className="row d-flex justify-content-center">
+                <div className="row d-flex justify-content-center post-content">
                     <div className="col-sm-9 post-content">
+                        <img src={singlePost.featured_media.sizes.full.source_url} alt={singlePost.featured_media.alt_text} />
                         <h1>{singlePost.title}</h1>
                         <div>
                             <div dangerouslySetInnerHTML={{__html: singlePost.content}} />
@@ -41,6 +47,7 @@ export default class Post extends Component {
                     </div>
                 </div>
               </div>
+            </div>
           )
         }
       }

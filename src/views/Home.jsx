@@ -4,7 +4,6 @@ import Header from '../components/Header'
 import PostExcerpt from '../components/PostExcerpt'
 import About from '../components/About'
 import Contact from '../components/Contact'
-import Footer from '../components/Footer'
 
 const Home = (props) => (
     <div>
@@ -14,7 +13,6 @@ const Home = (props) => (
             <PostExcerpt posts={props.posts} />
             <Contact />
         </div>
-        <Footer />
     </div>
 )
 

@@ -125,3 +125,17 @@ body {
 .footer-content {
   padding: 25px;
 }
+
+/** Post */
+.post-content {
+  padding: 50px;
+}
+
+.navbar {
+  background-color: teal;
+}
+
+.navbar a {
+  text-decoration: none;
+  color: #212529;
+}

@@ -3,6 +3,7 @@ import { BrowserRouter as Router, Route, Switch } from 'react-router-dom'
 
 import Home from './views/Home'
 import Post from './views/Post'
+import Footer from './components/Footer'
 
 export default class App extends Component {
     constructor(props) {
@@ -84,13 +85,15 @@ export default class App extends Component {
             )
         } else {
             return (
-                <Router>
+                <Router basename="/">
                     <div className="body">
                         <div className="content-body">
                             <Switch>
                                 <PropsRoute path='/home' component={Home} {...this.state} />
                                 <PropsRoute path='/:title' component={Post} {...this.state} />
+                                <PropsRoute path='/' component={Home} {...this.state} />
                             </Switch>
+                            <Footer />
                         </div>
                     </div>
                 </Router>
